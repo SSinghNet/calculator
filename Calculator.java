@@ -7,12 +7,13 @@ public class Calculator {
             ArrayList<Token> tokens = Tokenizer.parseExpressionString(expressionString);
             System.out.println(tokens);
 
-            System.out.println(calculateExpression(tokens));
+            double answer = calculateExpression(tokens);
+            System.out.println(answer);
+            return answer;
         } catch (Exception e) {
             e.printStackTrace();
             throw new Exception("Calculation failed.");
         }
-        return 0;
     }
 
     private static double calculateExpression(ArrayList<Token> tokens) {

@@ -1,7 +1,18 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        try {
-            Calculator.calculate("3 * 4 - 9^2 + 6");
+        try (Scanner scan = new Scanner(System.in)) {
+            String line = "";
+
+            while ((line = scan.nextLine()) != "q") {
+                try {
+                    Calculator.calculate(line);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
