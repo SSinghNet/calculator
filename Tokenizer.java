@@ -65,7 +65,7 @@ public class Tokenizer {
         }
 
         try {
-            double number = Float.parseFloat(word);
+            double number = Double.parseDouble(word);
             return new Token(TokenType.NUMBER, number);
         } catch (NumberFormatException e) {
             throw new Exception("Invalid Word");
