@@ -5,7 +5,7 @@ public class Main {
         try (Scanner scan = new Scanner(System.in)) {
             String line = "";
 
-            while ((line = scan.nextLine()) != "q") {
+            while (!(line = scan.nextLine()).equals("q")) {
                 try {
                     Calculator.calculate(line);
                 } catch (Exception e) {
